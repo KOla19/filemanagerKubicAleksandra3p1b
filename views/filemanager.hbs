@@ -1,0 +1,37 @@
+<div class="left">
+    <h3>filemanager</h3>
+    <br>
+    <a class="a" href="/reset">USUŃ DANE O PLIKACH Z TABLICY</a>
+</div>
+
+<div class='right'>
+
+    <table>
+  <tr>
+    <th>id</th>
+    <th>obraz</th>
+    <th>name</th>
+    <th>size</th>
+    <th>type</th>
+    <th>-</th>
+    <th>-</th>
+    <th>-</th>
+  </tr>
+  {{#each pliki}}
+    <tr>
+    <td>{{id}}</td>
+    <td><img src="{{obraz}}"/></td>
+    <td>{{name}}</td>
+    
+    <td>{{size}}</td>
+    <td>{{type}}</td>
+    <td ><a class="funkcja" href="/filemanager?a=del&i={{id}}">DELETE</a></td>
+    <td ><a class="funkcja" href="/filemanager?a=inf&i={{id}}">INFO</a></td>
+    <td ><a class="funkcja" href="/filemanager?a=dow&i={{id}}">DOWNLOAD</a></td>
+  </tr>
+{{/each}}
+
+  
+</table>
+
+</div>
