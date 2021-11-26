@@ -25,7 +25,7 @@ app.post("/filemanager", function (req, res) {
 
     form.keepExtensions = true   // zapis z rozszerzeniem pliku
     form.multiples = true
-    form.uploadDir = __dirname + '/static/upload/'       // folder do zapisu zdjęcia
+    form.uploadDir ='https://github.com/KOla19/filemanagerKubicAleksandra3p1b/tree/main/static/upload'       // folder do zapisu zdjęcia
 
     form.parse(req, function (err, fields, files) {
    // console.log(files.imageupload.length);
@@ -221,7 +221,7 @@ app.get("/login", function (req, res) {
 app.use(express.static('static'));
 app.use(express.json());
 
-app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
+app.set('views', path.join('views'));         // ustalamy katalog views
 app.engine('hbs', hbs({ defaultLayout: 'main.hbs' }));   // domyślny layout, potem można go zmienić
 app.set('view engine', 'hbs');
 app.listen(PORT, function () {
