@@ -25,7 +25,7 @@ app.post("/filemanager", function (req, res) {
 
     form.keepExtensions = true   // zapis z rozszerzeniem pliku
     form.multiples = true
-    form.uploadDir ='https://github.com/KOla19/filemanagerKubicAleksandra3p1b/tree/main/static/upload'       // folder do zapisu zdjęcia
+    form.uploadDir =__dirname + '/static/upload/'        // folder do zapisu zdjęcia
 
     form.parse(req, function (err, fields, files) {
    // console.log(files.imageupload.length);
