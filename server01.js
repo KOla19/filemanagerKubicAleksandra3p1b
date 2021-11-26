@@ -218,7 +218,7 @@ app.get("/login", function (req, res) {
 })
 
 
-app.use(express.static(__dirname + '/static'));
+app.use(express.static('static'));
 app.use(express.json());
 
 app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
